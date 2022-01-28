@@ -23,16 +23,22 @@ switch (meaning) {
   }
 }*/
 
-/*const color = prompt("введите цвет");
+
+const isColor = function(meaning){
 if (color === "красный") {
   console.log("стой");
 } else if (color === "жёлтый") {
-  console.log("приготовится");
+  console.log("приготовьтесь");
 } else {
   console.log("иди");
-}*/
+}
+}
+const color = prompt("введите цвет");
+const result = isColor(color);
+console.log(result);
 
-const isSeason = function (month) {
+
+/*const isSeason = function (month) {
   if (month >= 1 && month <= 2 && month === 12) {
     return "winter";
   } else if (month >= 3 && month <= 5) {
@@ -47,4 +53,4 @@ const isSeason = function (month) {
 };
 const meaning = +prompt("введите месяц цыфрами");
 const result = isSeason(meaning);
-console.log(result);
+console.log(result);*/
