@@ -1,45 +1,56 @@
-/*const meaning = prompt("введите + - * /");
-const number1 = +prompt("введите первую цыфру");
-const number2 = +prompt("введите вторую цыфру");
-switch (meaning) {
+/*const meaning1 = +prompt("введите первую цыфру");
+const meaning = prompt("введите + - * /");
+const meaning2 = +prompt("введите вторую цыфру");
+
+function calculator (number1, sign, number2){
+if(number1 === number1 && number2 === number2) { 
+  switch (meaning) {
   case "+": {
-    alert(number1 + number2);
+    return number1 + number2;
     break;
   }
   case "-": {
-    alert(number1 - number2);
+    return number1 - number2;
     break;
   }
   case "*": {
-    alert(number1 * number2);
+    return number1 * number2;
     break;
   }
   case "/": {
-    alert(number1 / number2);
+    return number1 / number2;
     break;
   }
   default: {
-    alert("введите корректные данные");
+    return "введите корректные данные";
   }
-}*/
-
-
-const isColor = function(meaning){
-if (color === "красный") {
-  console.log("стой");
-} else if (color === "жёлтый") {
-  console.log("приготовьтесь");
+}
 } else {
-  console.log("иди");
+  return 'Введите корректные данные!';
+};
+}
+const result = calculator (meaning1, meaning, meaning2);
+alert(result);*/
+
+/*const whatColor = function(meaning){
+if (color === "красный") {
+  return "стой";
+} else if (color === "жёлтый") {
+  return "приготовьтесь";
+} else if (color === "зелёный") {
+  return "иди";
+} else {
+  return 'Введите корректные данные';
 }
 }
 const color = prompt("введите цвет");
-const result = isColor(color);
-console.log(result);
+const result = whatColor(color);
+console.log(result);*/
 
-
-/*const isSeason = function (month) {
-  if (month >= 1 && month <= 2 && month === 12) {
+/*const whatSeason = function (month) {
+  if (month >= 1 && month <= 2) {
+    return "winter";
+  }else if (month === 12) {
     return "winter";
   } else if (month >= 3 && month <= 5) {
     return "spring";
@@ -52,5 +63,36 @@ console.log(result);
   }
 };
 const meaning = +prompt("введите месяц цыфрами");
-const result = isSeason(meaning);
+const result = whatSeason(meaning);
 console.log(result);*/
+
+const season = function (month) {
+  switch (month) {
+    case 12:
+    case 1:
+    case 2: {
+      return "winter";
+    }
+    case 3:
+    case 4:
+    case 5: {
+      return "spring";
+    }
+    case 6:
+    case 7:
+    case 8: {
+      return "summer";
+    }
+    case 9:
+    case 10:
+    case 11: {
+      return "autumm";
+    }
+    default: {
+      return "введите корректные данные";
+    }
+  }
+};
+const meaning = +prompt("введите месяц цыфрами");
+const result = season(meaning);
+alert(result);
